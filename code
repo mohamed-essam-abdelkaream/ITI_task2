@@ -1,0 +1,139 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: double.infinity,
+            height: 200,
+            color: Colors.amber,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 40.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Icon(Icons.arrow_back_ios_new),
+                ),
+                SizedBox(
+                  height: 60.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Account Settings',
+                    style:
+                        TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20.0,
+          ),
+          Center(
+            child: CircleAvatar(
+              radius: 60.0,
+              backgroundImage: AssetImage('images/2.jpg'),
+            ),
+          ),
+          Center(
+              child: Text(
+            'Mohamed essam',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+          )),
+          SizedBox(
+            height: 20.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'Edit Profile',
+              style: TextStyle(fontSize: 15.0, color: Colors.grey),
+            ),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Text(
+              'Phone Number',
+              style: TextStyle(
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+                labelText: '  01550809263',
+                suffixIcon: Icon(Icons.reply_all_sharp)),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Text(
+              'Email',
+              style: TextStyle(
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+                labelText: '  mohamed.essam.abdelkaream@gmail',
+                suffixIcon: Icon(Icons.reply_all_sharp)),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Text(
+              'password',
+              style: TextStyle(
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+                labelText: '  *******',
+                suffixIcon: Icon(Icons.reply_all_sharp)),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+              border:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+              labelText: '                                      LogOut',
+            ),
+          )
+        ],
+      )),
+    );
+  }
+}
+
+
+// صوره التصميم
+ https://telegra.ph/file/692b265840151a3f0b766.png 
